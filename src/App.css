@@ -1,0 +1,9 @@
+.app{
+   height:100vh;
+   background-color: #dadbd3;
+   display: grid;
+   place-items: center;
+}
+*{
+  margin: 0;
+}
