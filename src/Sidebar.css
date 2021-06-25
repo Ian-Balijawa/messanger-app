@@ -42,3 +42,20 @@
     color: gray;
     font-size: 30px !important;
 }
+.sidebar-chats{
+    flex: 1;
+    background-color:white;
+    overflow: scroll;
+}
+.chat-head{
+    color:rgb(13, 145, 13);
+    border: 1px solid rgb(13, 145, 13);
+    padding:10px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+    margin:5px
+}
