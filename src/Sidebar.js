@@ -9,6 +9,14 @@ import SidebarChats from './SidebarChats';
 // import SidebarChat from './SidebarChat'
 
 function Sidebar() {
+ 
+  //  method to capture our message
+  const  AddNewChat =()=>{
+    const chatname= prompt("Enter you message here")
+    if(chatname){
+        console.log(chatname)
+    }
+ }
   return (
     <div className="side-bar">
            <div className="sidebar-header">
@@ -35,10 +43,46 @@ function Sidebar() {
 
         {/* side bar chats */}
         <div className="sidebar-chats">
-            <div  className="chat-head">
+            <div onClick={AddNewChat}  className="chat-head">
               <h2>Add new Chat</h2>
             </div>
             <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+            <SidebarChats/>
+
         </div>
     </div>
   )
