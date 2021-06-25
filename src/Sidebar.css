@@ -22,3 +22,19 @@
     padding: 10px;
     height: 39px;
 }
+.search-container{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+
+}
+.search-container > input{
+  border: none;
+  margin-left: 10px;
+  outline-width: 0;
+  padding: 10px;
+  height: 10px;
+  cursor: pointer;
+}
