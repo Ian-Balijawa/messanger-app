@@ -38,3 +38,7 @@
   height: 10px;
   cursor: pointer;
 }
+.search-container >.MuiSvgIcon-root{
+    color: gray;
+    font-size: 30px !important;
+}

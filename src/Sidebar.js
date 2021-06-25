@@ -31,6 +31,13 @@ function Sidebar() {
             <input type="text" placeholder="Search or start new chat"/>
           </div>   
         </div>
+
+        {/* side bar chats */}
+        <div className="sidebar-chats">
+            <div  className="chat-head">
+              <h2>Add new Chat</h2>
+            </div>        
+        </div>
     </div>
   )
 }
