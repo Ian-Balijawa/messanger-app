@@ -93,3 +93,23 @@
     height: 62px;
     border-top: 1px solid lightgray;
 }
+.message-footer >form{
+    display:flex;
+    flex:1
+}
+.message-footer >form >input{
+    flex:1;
+    padding: 10px;
+    border-radius: 15px;
+    outline-width: 0;
+    border:none
+}
+.message-footer >form >button{
+   border: 1px solid green;
+   border-radius: 10px;
+   margin: 5px;
+  outline-width: 0;
+  color: green;
+  cursor: pointer;
+  padding: 10px;
+}
