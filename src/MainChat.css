@@ -1,0 +1,5 @@
+.chat-field{
+    display:flex;
+    flex: 0.65;
+    flex-direction:column
+}
