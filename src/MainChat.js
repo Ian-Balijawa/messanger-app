@@ -29,6 +29,13 @@ function MainChat() {
             </IconButton>
           </div>
         </div>
+        <div className="message-body">
+                <p className='chat-message'>
+                <span className="username">New Message</span>
+                      Hello guys whats up  
+                <small className="time-stamp">Date goes here</small>
+                </p>      
+        </div>
     </div>
   )
 }
