@@ -35,10 +35,11 @@
     padding: 30px;
     overflow: scroll;
 }
+/* google chrome */
 .message-body::-webkit-scrollbar{
     display: none;
 }
-/* for internet explore ,Edge and fire fox */
+/* for internet explore ,Edge and fire fox ,opera mini */
 .message-body{
     -ms-overflow-style: none;
     scrollbar-width: none;
