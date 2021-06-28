@@ -14,3 +14,15 @@
     cursor: pointer;
     flex: 1;
 }
+.header_info >h3{
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+.header_info >p{
+    color: gray;
+}
+.message-right{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100px;
+}
