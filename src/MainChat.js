@@ -101,6 +101,14 @@ function MainChat() {
                 <small className="time-stamp">Date goes here</small>
                 </p>    
         </div>
+
+        <div className="message-footer">
+            <InsertEmoticon/>
+            <form>
+             <input  placeholder="Type a message here" type="text"/>   
+             <button  type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
   )
 }

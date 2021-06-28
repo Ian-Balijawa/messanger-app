@@ -86,3 +86,10 @@
     transform: scale(1.08);
     opacity:1;  
 }
+.message-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgray;
+}
