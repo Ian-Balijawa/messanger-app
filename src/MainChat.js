@@ -1,10 +1,34 @@
 import React from 'react'
 import "./MainChat.css"
+import {Avatar, IconButton} from "@material-ui/core"
+import ChatIcon from '@material-ui/icons/Chat';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import SearchIcon from '@material-ui/icons/Search';
+import { DonutLarge, InsertEmoticon } from '@material-ui/icons'
 
 function MainChat() {
   return (
     <div className="chat-field">
-        <h5>this is our messaging area</h5>
+        <div className="message-header">
+        <Avatar src='https://avatars.dicebear.com/api/human/88.svg'/>
+          <div className="header_info">
+          <h3>Chanel name goes here</h3>
+          <p>Last seen{""}
+             Date Goes here
+          </p>
+          </div>
+          <div className="message-right">
+          <IconButton>
+            <DonutLarge/>
+            </IconButton>
+            <IconButton>
+            <ChatIcon/>
+            </IconButton>
+            <IconButton>
+            <MoreVertIcon/>
+            </IconButton>
+          </div>
+        </div>
     </div>
   )
 }
