@@ -31,10 +31,75 @@ function MainChat() {
         </div>
         <div className="message-body">
                 <p className='chat-message'>
-                <span className="username">New Message</span>
+                <span className="username">BannyT</span><br/>
                       Hello guys whats up  
                 <small className="time-stamp">Date goes here</small>
-                </p>      
+                </p>   
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up  
+                <small className="time-stamp">Date goes here</small>
+                </p>
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up  
+                <small className="time-stamp">Date goes here</small>
+                </p>
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up  
+                <small className="time-stamp">Date goes here</small>
+                </p>
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up  
+                <small className="time-stamp">Date goes here</small>
+                </p>
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up  
+                <small className="time-stamp">Date goes here</small>
+                </p>
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up  , are we pumped for the build
+                <small className="time-stamp">Date goes here</small>
+                </p>
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up , yeeeeee 
+                <small className="time-stamp">Date goes here</small>
+                </p>
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up, wooooowwwww  
+                <small className="time-stamp">Date goes here</small>
+                </p>
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up , yooooo wadup 
+                <small className="time-stamp">Date goes here</small>
+                </p> 
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up , yooooo wadup 
+                <small className="time-stamp">Date goes here</small>
+                </p>  
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up , yooooo wadup 
+                <small className="time-stamp">Date goes here</small>
+                </p>  
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up , yooooo wadup 
+                <small className="time-stamp">Date goes here</small>
+                </p>  
+                <p className='chat-message'>
+                <span className="username">BannyT</span><br/>
+                      Hello guys whats up , yooooo wadup 
+                <small className="time-stamp">Date goes here</small>
+                </p>    
         </div>
     </div>
   )
