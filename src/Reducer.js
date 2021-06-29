@@ -4,7 +4,7 @@ export const initialState={
     user: null,
 }
 
-// implement reducer to manage user state
+//implement reducer to manage user state
 
 const reducer =( state,action)=>{
     switch(action.type){ 
