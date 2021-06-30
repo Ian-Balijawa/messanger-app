@@ -8,7 +8,10 @@ import SearchIcon from '@material-ui/icons/Search';
 import SidebarChats from './SidebarChats';
 import db from './firebase'
 import {auth,provider} from "./firebase"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import SidebarChat from './SidebarChat'
+toast.configure();
 
 function Sidebar() {
  
@@ -16,6 +19,7 @@ function Sidebar() {
   const  AddNewChat =()=>{
     const chatname= prompt("Enter you message here")
     if(chatname){
+        toast.success('Mesage captured')
         console.log(chatname)
     }
  }
