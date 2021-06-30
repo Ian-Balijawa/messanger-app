@@ -8,8 +8,15 @@ function App() {
   return (
     <div className="app">
        <div className="main-body">
-         <Sidebar/>
-         <MainChat/>
+         <Router>
+           <Switch>
+               <Route path="/">
+               <Sidebar/>
+               <MainChat/>
+               </Route>
+           </Switch>
+         </Router>
+         
           
        </div>
 
