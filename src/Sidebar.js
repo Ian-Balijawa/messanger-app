@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import "./Sidebar.css"
 import {Avatar, IconButton} from "@material-ui/core"
 import { DonutLarge } from '@material-ui/icons'
@@ -14,7 +14,9 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure();
 
 function Sidebar() {
- 
+   const[rooms,setRooms]=useState([])
+
+
   //  method to capture our message
   const  AddNewChat =()=>{
     const chatname= prompt("Enter your message here")
@@ -26,6 +28,24 @@ function Sidebar() {
        
     }
  }
+      // React hook to render our channels from db
+        useEffect(()=>{
+           const unsubscribe = db.collection('Rooms').onSnapshot(snap=>{
+              setRooms(snap.docs.map(doc=>(
+                {
+                 data:doc.data(),
+                 id:doc.id 
+                }
+              )))
+           })
+
+           return ()=>{
+             unsubscribe()
+           }
+           console.log(rooms);
+        },[])
+
+
   return (
     <div className="side-bar">
            <div className="sidebar-header">
