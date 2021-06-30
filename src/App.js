@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import React from "react";
 import './App.css';
 import Sidebar from './Sidebar';
-import MainChat from './MainChat'
+import MainChat from './MainChat';
+import Login from "./Login"
+
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
                <Route path="/">
                <Sidebar/>
                <MainChat/>
+               </Route>
+               <Route path="/login">
+                 <Login/>
                </Route>
            </Switch>
          </Router> 
