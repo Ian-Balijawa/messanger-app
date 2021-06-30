@@ -44,7 +44,7 @@ function Sidebar() {
            }
           
         },[])
-        console.log(rooms);
+ 
 
 
   return (
@@ -76,43 +76,12 @@ function Sidebar() {
             <div onClick={AddNewChat}  className="chat-head">
               <h2>Add New Channel</h2>
             </div>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-            <SidebarChats/>
-
+            {
+              rooms.map(res=>(
+                <SidebarChats key='id' id={res.id} channelname={res.data.name} />
+              ))
+            }
+            
         </div>
     </div>
   )
