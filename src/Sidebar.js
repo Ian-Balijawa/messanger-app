@@ -17,10 +17,12 @@ function Sidebar() {
  
   //  method to capture our message
   const  AddNewChat =()=>{
-    const chatname= prompt("Enter you message here")
+    const chatname= prompt("Enter your message here")
     if(chatname){
-      console.log(chatname)
-        // toast.success('Mesage captured',{position:toast.POSITION.TOP_RIGHT})
+        db.collection('Rooms').add({
+          name:chatname
+        })
+     toast.success('Channel Successfully Created',{position:toast.POSITION.TOP_RIGHT})
        
     }
  }
