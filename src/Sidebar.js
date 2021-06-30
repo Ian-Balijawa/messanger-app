@@ -22,7 +22,7 @@ function Sidebar() {
         db.collection('Rooms').add({
           name:chatname
         })
-     toast.success('Channel Successfully Created',{position:toast.POSITION.TOP_RIGHT})
+    toast.success('Channel Successfully Created',{position:toast.POSITION.TOP_RIGHT})
        
     }
  }
@@ -53,7 +53,7 @@ function Sidebar() {
         {/* side bar chats */}
         <div className="sidebar-chats">
             <div onClick={AddNewChat}  className="chat-head">
-              <h2>Add new Chat</h2>
+              <h2>Add New Channel</h2>
             </div>
             <SidebarChats/>
             <SidebarChats/>
