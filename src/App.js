@@ -15,9 +15,7 @@ function App() {
                <MainChat/>
                </Route>
            </Switch>
-         </Router>
-         
-          
+         </Router> 
        </div>
 
     </div>
