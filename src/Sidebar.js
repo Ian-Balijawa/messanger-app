@@ -42,8 +42,9 @@ function Sidebar() {
            return ()=>{
              unsubscribe()
            }
-           console.log(rooms);
+          
         },[])
+        console.log(rooms);
 
 
   return (
