@@ -19,8 +19,9 @@ function Sidebar() {
   const  AddNewChat =()=>{
     const chatname= prompt("Enter you message here")
     if(chatname){
-        toast.success('Mesage captured',{position:toast.POSITION.TOP_RIGHT})
-        console.log(chatname)
+      console.log(chatname)
+        // toast.success('Mesage captured',{position:toast.POSITION.TOP_RIGHT})
+       
     }
  }
   return (

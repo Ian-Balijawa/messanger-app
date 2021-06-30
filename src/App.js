@@ -12,11 +12,11 @@ function App() {
        <div className="main-body">
          <Router>
            <Switch>
-               <Route path="/">
+               <Route exact path="/"> 
                <Sidebar/>
                <MainChat/>
                </Route>
-               <Route path="/login">
+               <Route exact path="/login">
                  <Login/>
                </Route>
            </Switch>
