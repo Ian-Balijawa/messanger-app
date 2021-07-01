@@ -12,7 +12,7 @@ function App() {
 
    // functionality to manipulate our state
       useEffect(()=>{
-        const unsubcribe = auth.onAuthStateChanged(authuser=>{
+        const unsubscribe = auth.onAuthStateChanged(authuser=>{
           if(authuser){
             dispatch({
               type:'SET_USER',
@@ -24,9 +24,12 @@ function App() {
               type:'SET_USER',
               user:null
             })
-          }
-        })     
-        return ()=>{unsubscribe()}
+          }     
+        }) 
+        return ()=>{
+          unsubscribe()
+        }    
+        
       },[])
 
 
