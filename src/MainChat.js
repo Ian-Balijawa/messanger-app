@@ -5,6 +5,10 @@ import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
 import { DonutLarge, InsertEmoticon } from '@material-ui/icons'
+import {useParams} from "react-router-dom"
+import {db} from "./firebase"
+import {useStateValue} from './StateProvider'
+import firebase from "firebase";
 
 function MainChat() {
   return (

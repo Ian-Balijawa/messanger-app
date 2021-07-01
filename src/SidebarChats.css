@@ -14,3 +14,7 @@
 .chat-info{
     margin-left: 15px;
 }
+.link{
+    text-decoration: none !important;
+    color: black;
+}
