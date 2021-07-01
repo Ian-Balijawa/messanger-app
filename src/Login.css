@@ -5,3 +5,31 @@
     display: grid;
     place-items: center;
 }
+.login-container{
+    padding: 100px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px rgba(0, 0, 0.12, 0 1px);
+}
+.login-container >img{
+    height: 200px;
+    margin-bottom: 40px;
+    object-fit: contain;
+}
+.login-container >Button{
+    margin-top: 50px;
+    color: white;
+    background-color: blue;
+}
+.login-container >Button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: blue;
+}
+.login-text >h2{
+   font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+   color: blue;
+   
+}
