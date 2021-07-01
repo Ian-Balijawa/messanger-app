@@ -1,10 +1,17 @@
 import React from 'react'
 import "./Login.css"
+import { Button } from '@material-ui/core'
 
 function Login() {
   return (
-    <div>
-        <h4>Am the login component</h4>
+    <div className="login">
+         <div className="login-container">
+           <img src="https://images.unsplash.com/photo-1587377838789-968194a7cc88?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNoYXQlMjBhcHB8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+           <div className="login-text">
+              <h2>Sign in to Message Me </h2>
+           </div>
+           <Button> SignIn With Google</Button>
+         </div> 
     </div>
   )
 }
