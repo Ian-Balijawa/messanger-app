@@ -26,8 +26,9 @@ function Sidebar() {
         db.collection('Rooms').add({
           name:chatname
         })
-    toast.success('Channel Successfully Created',{position:toast.POSITION.TOP_RIGHT})
-       
+    const audio = new Audio('https://drive.google.com/uc?export=download&id=1M95VOpto1cQ4FQHzNBaLf0WFQglrtWi7');
+    audio.play();   
+    toast.success('Channel Successfully Created',{position:toast.POSITION.TOP_RIGHT})   
     }
  }
       // React hook to render our channels from db
