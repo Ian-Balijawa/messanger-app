@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import "./MainChat.css"
 import {Avatar, IconButton} from "@material-ui/core"
 import ChatIcon from '@material-ui/icons/Chat';
@@ -38,6 +38,7 @@ function MainChat() {
       const[open,setOpen]=useState(false);
       const {roomId}=useParams()
       const [message,setMessage]=useState('')
+      const [messages,setMessages]=useState([])
       const [{user}]=useStateValue()
       
       //method to open dialog
@@ -63,6 +64,17 @@ function MainChat() {
            toast.success('Channel Successfully Created',{position:toast.POSITION.TOP_RIGHT}) 
            setMessage('')
        }
+
+       //function to fetch messages from db (React Hook)
+           useEffect(()=>{
+                  if(roomId){
+                        db.collection('Rooms').doc(roomId).collection('Messages').orderBy('timestamp','asc').onSnapshot(snap=>{
+                           setMessages(snap.docs.map(doc=>doc.data()))   
+                        })
+                  }      
+           },[])
+
+           console.log(messages)
 
   return (
     <div className="chat-field">
