@@ -104,7 +104,6 @@ const useStyles = makeStyles({
                   <p className={`chat-message ${res.name===user.displayName && 'message-sender'}`}>
                   <span className="username">{res.name}</span><br/>
                         {res.text}
-                  {/* <small className="time-stamp">{new Date(res.timestamp?.toDate()).toUTCString()} </small> */}
                   <small className="time-stamp"> {timeago.format(new Date(res?.timestamp?.toDate()))} </small>
                   </p>
               ))
