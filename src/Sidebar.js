@@ -81,7 +81,7 @@ function Sidebar() {
             </div>
             {
               rooms.map(res=>(
-                <SidebarChats key='id' id={res.id} channelname={res.data.name} />
+                <SidebarChats key={res.id} id={res.id} channelname={res.data.name} />
               ))
             }
             

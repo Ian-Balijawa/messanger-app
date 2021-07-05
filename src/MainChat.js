@@ -11,6 +11,7 @@ import {useStateValue} from './StateProvider'
 import firebase from "firebase";
 import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ReactTimeAgo from 'react-time-ago'
 
 // setting up dialog
 import { makeStyles } from '@material-ui/core/styles';
@@ -34,12 +35,13 @@ const useStyles = makeStyles({
     });
 
 
-function MainChat() {
+      function MainChat() {
       const[open,setOpen]=useState(false);
       const {roomId}=useParams()
       const [message,setMessage]=useState('')
       const [messages,setMessages]=useState([])
       const [{user}]=useStateValue()
+      const [date,setDate]=useState()
       
       //method to open dialog
       const handleOpen=()=>{
@@ -61,7 +63,7 @@ function MainChat() {
            
            const audio = new Audio('https://drive.google.com/uc?export=download&id=1M95VOpto1cQ4FQHzNBaLf0WFQglrtWi7');
            audio.play();   
-           toast.success('Channel Successfully Created',{position:toast.POSITION.TOP_RIGHT}) 
+           toast.success('Message Sent Successsfully',{position:toast.POSITION.TOP_RIGHT}) 
            setMessage('')
        }
 
@@ -72,8 +74,7 @@ function MainChat() {
                            setMessages(snap.docs.map(doc=>doc.data()))   
                         })
                   }      
-           },[])
-
+           },[roomId])
 
   return (
     <div className="chat-field">
@@ -99,10 +100,10 @@ function MainChat() {
         </div>
         <div className="message-body">
               {messages.map((res)=>(
-                  <p className='chat-message'>
+                  <p className={`chat-message ${res.name===user.displayName && 'message-sender'}`}>
                   <span className="username">{res.name}</span><br/>
                         {res.text}
-                  <small className="time-stamp">Date goes here</small>
+                  <small className="time-stamp">{new Date(res.timestamp?.toDate()).toUTCString()} </small>
                   </p>
               ))
 
