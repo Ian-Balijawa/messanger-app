@@ -9,6 +9,7 @@ import {useParams} from "react-router-dom"
 import {db} from "./firebase"
 import {useStateValue} from './StateProvider'
 import firebase from "firebase";
+
 // setting up dialog
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -33,7 +34,9 @@ const useStyles = makeStyles({
 
 function MainChat() {
       const[open,setOpen]=useState(false);
-
+      const {roomId}=useParams()
+      const [message,setMessage]=useState('')
+      console.log(message)
       //method to open dialog
       const handleOpen=()=>{
             setOpen(true)
@@ -42,6 +45,11 @@ function MainChat() {
       const handleClose=()=>{
             setOpen(false)
       }
+
+      //function to send message to our database
+       const sendMessage=(e)=>{
+            e.preventDefault()
+       }
 
   return (
     <div className="chat-field">
@@ -141,8 +149,8 @@ function MainChat() {
         <div className="message-footer">
             <InsertEmoticon/>
             <form>
-             <input  placeholder="Type a message here" type="text"/>   
-             <button  type="submit">Send Message</button>
+             <input value={message} onChange={e=>setMessage(e.target.value)} placeholder="Type a message here" type="text"/>   
+             <button onClick={sendMessage} type="submit">Send Message</button>
             </form>
         </div>
 
