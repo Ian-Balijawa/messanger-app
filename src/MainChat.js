@@ -35,13 +35,13 @@ const useStyles = makeStyles({
     });
 
 
-      function MainChat() {
+      function MainChat({date}) {
       const[open,setOpen]=useState(false);
       const {roomId}=useParams()
       const [message,setMessage]=useState('')
       const [messages,setMessages]=useState([])
       const [{user}]=useStateValue()
-      const [date,setDate]=useState()
+   
       
       //method to open dialog
       const handleOpen=()=>{
@@ -104,6 +104,7 @@ const useStyles = makeStyles({
                   <span className="username">{res.name}</span><br/>
                         {res.text}
                   <small className="time-stamp">{new Date(res.timestamp?.toDate()).toUTCString()} </small>
+                  <small className="time-stamp"> <ReactTimeAgo date={new Date(res.timestamp)}/> </small>
                   </p>
               ))
 
