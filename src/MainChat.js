@@ -6,9 +6,11 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
 import { DonutLarge, InsertEmoticon } from '@material-ui/icons'
 import {useParams} from "react-router-dom"
-import {db} from "./firebase"
+import db from "./firebase"
 import {useStateValue} from './StateProvider'
 import firebase from "firebase";
+import {toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // setting up dialog
 import { makeStyles } from '@material-ui/core/styles';
@@ -36,7 +38,8 @@ function MainChat() {
       const[open,setOpen]=useState(false);
       const {roomId}=useParams()
       const [message,setMessage]=useState('')
-      console.log(message)
+      const [{user}]=useStateValue()
+      
       //method to open dialog
       const handleOpen=()=>{
             setOpen(true)
@@ -49,6 +52,16 @@ function MainChat() {
       //function to send message to our database
        const sendMessage=(e)=>{
             e.preventDefault()
+            db.collection('Rooms').doc(roomId).collection('Messages').add({
+                  text:message,
+                  name:user.displayName,
+                  timestamp:firebase.firestore.FieldValue.serverTimestamp()
+            })
+           
+           const audio = new Audio('https://drive.google.com/uc?export=download&id=1M95VOpto1cQ4FQHzNBaLf0WFQglrtWi7');
+           audio.play();   
+           toast.success('Channel Successfully Created',{position:toast.POSITION.TOP_RIGHT}) 
+           setMessage('')
        }
 
   return (
