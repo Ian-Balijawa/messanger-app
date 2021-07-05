@@ -74,7 +74,6 @@ function MainChat() {
                   }      
            },[])
 
-           console.log(messages)
 
   return (
     <div className="chat-field">
@@ -99,76 +98,16 @@ function MainChat() {
           </div>
         </div>
         <div className="message-body">
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up  
-                <small className="time-stamp">Date goes here</small>
-                </p>   
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up  
-                <small className="time-stamp">Date goes here</small>
-                </p>
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up  
-                <small className="time-stamp">Date goes here</small>
-                </p>
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up  
-                <small className="time-stamp">Date goes here</small>
-                </p>
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up  
-                <small className="time-stamp">Date goes here</small>
-                </p>
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up  
-                <small className="time-stamp">Date goes here</small>
-                </p>
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up  , are we pumped for the build
-                <small className="time-stamp">Date goes here</small>
-                </p>
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up , yeeeeee 
-                <small className="time-stamp">Date goes here</small>
-                </p>
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up, wooooowwwww  
-                <small className="time-stamp">Date goes here</small>
-                </p>
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up , yooooo wadup 
-                <small className="time-stamp">Date goes here</small>
-                </p> 
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up , yooooo wadup 
-                <small className="time-stamp">Date goes here</small>
-                </p>  
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up , yooooo wadup 
-                <small className="time-stamp">Date goes here</small>
-                </p>  
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up , yooooo wadup 
-                <small className="time-stamp">Date goes here</small>
-                </p>  
-                <p className='chat-message'>
-                <span className="username">BannyT</span><br/>
-                      Hello guys whats up , yooooo wadup 
-                <small className="time-stamp">Date goes here</small>
-                </p>    
+              {messages.map((res)=>(
+                  <p className='chat-message'>
+                  <span className="username">{res.name}</span><br/>
+                        {res.text}
+                  <small className="time-stamp">Date goes here</small>
+                  </p>
+              ))
+
+              }
+                          
         </div>
 
         <div className="message-footer">
