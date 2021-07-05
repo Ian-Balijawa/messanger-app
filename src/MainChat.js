@@ -13,6 +13,7 @@ import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as timeago from 'timeago.js';
 
+
 // setting up dialog
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -104,7 +105,7 @@ const useStyles = makeStyles({
                   <span className="username">{res.name}</span><br/>
                         {res.text}
                   {/* <small className="time-stamp">{new Date(res.timestamp?.toDate()).toUTCString()} </small> */}
-                  <small className="time-stamp">{timeago.format(new Date(res.timestamp?.toDate())} </small>
+                  <small className="time-stamp"> {timeago.format(new Date(res?.timestamp?.toDate()))} </small>
                   </p>
               ))
 
