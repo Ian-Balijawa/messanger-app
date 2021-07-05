@@ -11,7 +11,7 @@ import {useStateValue} from './StateProvider'
 import firebase from "firebase";
 import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ReactTimeAgo from 'react-time-ago'
+import * as timeago from 'timeago.js';
 
 // setting up dialog
 import { makeStyles } from '@material-ui/core/styles';
@@ -103,8 +103,8 @@ const useStyles = makeStyles({
                   <p className={`chat-message ${res.name===user.displayName && 'message-sender'}`}>
                   <span className="username">{res.name}</span><br/>
                         {res.text}
-                  <small className="time-stamp">{new Date(res.timestamp?.toDate()).toUTCString()} </small>
-                  <small className="time-stamp"> <ReactTimeAgo date={new Date(res.timestamp)}/> </small>
+                  {/* <small className="time-stamp">{new Date(res.timestamp?.toDate()).toUTCString()} </small> */}
+                  <small className="time-stamp">{timeago.format(new Date(res.timestamp?.toDate())} </small>
                   </p>
               ))
 

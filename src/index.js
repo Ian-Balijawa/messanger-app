@@ -6,13 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { StateProvider } from './StateProvider';
 import reducer,{initialState} from './Reducer.js';
 
-// importing time ago packages
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
-import ru from 'javascript-time-ago/locale/ru'
 
-TimeAgo.addDefaultLocale(en)
-TimeAgo.addLocale(ru)
 
 ReactDOM.render(
   <React.StrictMode>
