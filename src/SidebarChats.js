@@ -30,7 +30,7 @@ function SidebarChats({channelname,id}) {
       <Avatar src={`https://avatars.dicebear.com/api/human/${randomNumber}.svg`}/>
      <div className="chat-info">
        <h2>{channelname}</h2>
-       {messages?(
+       {messages?.length> 0?(
         <p>{messages[messages.length-1]?.text}</p>
        ):(
          <p className="empty-array">This channel has no messages</p>
