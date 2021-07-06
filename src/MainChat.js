@@ -77,6 +77,8 @@ const useStyles = makeStyles({
                   }      
            },[roomId])
 
+          //  function to clear messages goes here
+
   return (
     <div className="chat-field">
         <div className="message-header">
