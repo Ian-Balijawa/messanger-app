@@ -20,3 +20,7 @@
     text-decoration: none !important;
     color: black;
 }
+.empty-array{
+    color: orange;
+    font-family: 'Times New Roman', Times, serif;
+}
