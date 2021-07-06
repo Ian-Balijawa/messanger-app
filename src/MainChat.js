@@ -42,6 +42,7 @@ const useStyles = makeStyles({
       const [message,setMessage]=useState('')
       const [messages,setMessages]=useState([])
       const [{user}]=useStateValue()
+      const [channelName, setChannel]=useState('')
    
       
       //method to open dialog
@@ -74,6 +75,12 @@ const useStyles = makeStyles({
                         db.collection('Rooms').doc(roomId).collection('Messages').orderBy('timestamp','asc').onSnapshot(snap=>{
                            setMessages(snap.docs.map(doc=>doc.data()))   
                         })
+
+                      // code to fetch details about the channel we are working with
+                        db.collection('Rooms').doc(roomId).onSnapshot(snap=>{
+                          setChannel(snap.data().name)
+                        })
+
                   }      
            },[roomId])
 
@@ -84,9 +91,9 @@ const useStyles = makeStyles({
         <div className="message-header">
         <Avatar src='https://avatars.dicebear.com/api/human/88.svg'/>
           <div className="header_info">
-          <h3>Chanel name goes here</h3>
-          <p>Last seen{""}
-             Date Goes here
+          <h3>{channelName}</h3>
+          <p>Last seen &nbsp;
+             {new Date(messages[messages.length-1]?.timestamp?.toDate()).toUTCString()}
           </p>
           </div>
           <div className="message-right">
