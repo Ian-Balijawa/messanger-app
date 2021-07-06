@@ -92,7 +92,7 @@ const useStyles = makeStyles({
               type:'SET_USER',
               user:null
              })
-             this.handleClose();
+             setOpen(false)
            }
 
   return (
