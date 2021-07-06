@@ -3,6 +3,7 @@
     padding: 20px;
     cursor: pointer;
     border-bottom: 1px solid #f6f6f6;
+    
 }
 .chats:hover{
     background-color: #ebebeb;
@@ -13,6 +14,7 @@
 }
 .chat-info{
     margin-left: 15px;
+    margin-right: 20px;
 }
 .link{
     text-decoration: none !important;

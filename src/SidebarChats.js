@@ -2,6 +2,8 @@ import React,{useEffect,useState} from 'react'
 import "./SidebarChats.css"
 import {Avatar, IconButton} from "@material-ui/core"
 import { Link} from "react-router-dom";
+import Badge from '@material-ui/core/Badge';
+import MailIcon from '@material-ui/icons/Mail';
 
 function SidebarChats({channelname,id}) {
    const[randomNumber,setRandom]=useState('')
@@ -19,6 +21,9 @@ function SidebarChats({channelname,id}) {
        <h2>{channelname}</h2>
        <p>Hello guys hows the build</p>
      </div>
+     <Badge badgeContent={4} color="secondary">
+        <MailIcon />
+      </Badge>
     </div>
     </Link>
    
