@@ -96,7 +96,7 @@ const useStyles = makeStyles({
             {messages.length>0 ?(
               <small>{new Date(messages[messages.length-1]?.timestamp?.toDate()).toUTCString()} </small> 
             ):(
-               <small>No last seen</small>
+               <small className="no-lastseen">No user visited this channel</small>
             )}   
           </p>
           </div>

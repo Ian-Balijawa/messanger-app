@@ -37,7 +37,7 @@ function SidebarChats({channelname,id}) {
        )}
        
      </div>
-     <Badge badgeContent={4} color="secondary">
+     <Badge badgeContent={messages?.length} color="secondary">
         <MailIcon />
       </Badge>
     </div>
