@@ -17,11 +17,11 @@ function SidebarChats({channelname,id}) {
     //useEffect to render last message in this channel
     useEffect(()=>{
           if(id){
-            db.collection('Room').doc(id).collection('Messages').orderBy('timestamp','asc').onSnapshot(snap=>{
+            db.collection('Rooms').doc(id).collection('Messages').orderBy('timestamp','asc').onSnapshot(snap=>{
               setMessages(snap.docs.map(doc=>doc.data()))
             })
           }
-    },[])
+    },[id])
     console.log(messages)
 
   return (
