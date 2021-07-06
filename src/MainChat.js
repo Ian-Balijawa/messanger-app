@@ -92,13 +92,13 @@ const useStyles = makeStyles({
         <Avatar src='https://avatars.dicebear.com/api/human/88.svg'/>
           <div className="header_info">
           <h3>{channelName}</h3>
-          <h4>Last seen &nbsp;
+          <p>Last seen &nbsp;
             {messages.length>0 ?(
-              <p>{new Date(messages[messages.length-1]?.timestamp?.toDate()).toUTCString()}</p> 
+              <small>{new Date(messages[messages.length-1]?.timestamp?.toDate()).toUTCString()} </small> 
             ):(
-               <p>No last seen</p>
+               <small>No last seen</small>
             )}   
-          </h4>
+          </p>
           </div>
           <div className="message-right">
           <IconButton>
