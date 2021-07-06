@@ -21,6 +21,9 @@
     color: black;
 }
 .empty-array{
-    color:red;
+    color:red;  
     font-family: 'Times New Roman', Times, serif;
+}
+.badge{
+    font-size: 100px !important;
 }

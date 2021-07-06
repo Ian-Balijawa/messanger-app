@@ -94,7 +94,7 @@ const useStyles = makeStyles({
           <h3>{channelName}</h3>
           <p>Last seen &nbsp;
             {messages.length>0 ?(
-              <small>{new Date(messages[messages.length-1]?.timestamp?.toDate()).toUTCString()} </small> 
+              <small className="last-seen">{new Date(messages[messages.length-1]?.timestamp?.toDate()).toLocaleString()} </small> 
             ):(
                <small className="no-lastseen">No user visited this channel</small>
             )}   
