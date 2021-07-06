@@ -30,7 +30,7 @@ function SidebarChats({channelname,id}) {
       <Avatar src={`https://avatars.dicebear.com/api/human/${randomNumber}.svg`}/>
      <div className="chat-info">
        <h2>{channelname}</h2>
-       <p>Hello guys hows the build</p>
+       <p>{messages[messages.length-1]?.text}</p>
      </div>
      <Badge badgeContent={4} color="secondary">
         <MailIcon />
