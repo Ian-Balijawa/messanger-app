@@ -18,7 +18,7 @@ function SidebarChats({channelname,id}) {
     useEffect(()=>{
           if(id){
             db.collection('Room').doc(id).collection('Messages').orderBy('timestamp','asc').onSnapshot(snap=>{
-              setMessages(snap.doc.map(doc=>doc.data()))
+              setMessages(snap.docs.map(doc=>doc.data()))
             })
           }
     },[])
